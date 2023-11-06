@@ -1,0 +1,139 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    background-image: url(bodybuilder.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container2 {
+    background-color: #a3b18a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 480px;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 50.8), 0 6px 30px 0 rgba(0, 0, 0, 50.19);
+}
+#task{
+    border-style: none;
+    padding: 1rem 9rem 1rem 1rem;
+    border-radius: 1rem;
+    border: 3px solid #344e41;
+    outline-color:grey;
+    
+}
+#hit{
+    position: absolute;
+    color: #3a5a40;
+    border: 1px solid #344e41;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    right:0.5%;
+    top: 4%;
+    background-color: #dad7cd;
+}
+.cancel1{
+   height:35px;
+   width: 35px;
+   font-size: 20px;
+   line-height: 40px;
+   margin-left:2rem;
+   padding: 10px;
+}
+.cancel1:hover{
+    background-color:#a3b18a ;      
+    border-radius: 50%;
+
+}
+.cancel1:active{
+    background-color:#dad7cd;
+}
+.inputText{
+    position: relative;
+}
+
+#checkbox1{
+    margin:0 0.6rem 0 0;
+}
+.input{
+    display: flex;
+    align-items:center;
+    gap: 0.6rem;
+}
+.checked{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px 12px 50px;
+    margin-top: 1.5rem;
+    background-color: #dad7cd;
+    border-radius: 10px;
+    user-select: none;
+}   
+
+
+.visible{
+    display: none;
+    
+}
+
+ul li{
+    list-style: none;
+    color: #121212;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    margin-left: rem;
+}
+ul li::before{
+    content: '';
+    background-image: url(./images/unchecked.png);
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 16px;
+    left: 8px;
+}
+.decorate{
+    text-decoration: line-through;
+}
+.decorate::before{
+    
+    background-image: url(./images/checked.png);
+}
+
+
+@media(min-width:450px){
+   #task{
+    padding: 1rem 14rem 1rem 1rem;
+   }   
+   #hit{
+    right: 0.5%;
+    top:4%;
+   }
+   .container2{
+    padding: 2rem;
+   }
+}
